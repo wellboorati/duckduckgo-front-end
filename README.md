@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# DuckDuckGo Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the DuckDuckGo search API wrapper. It allows users to perform searches, view results, navigate through pages, and see search history.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [Yarn](https://yarnpkg.com/) (preferred package manager)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the repository and install dependencies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+git clone https://github.com/wellboorati/duckduckgo-front-end.git
+cd duckduckgo-frontend
+yarn install
+```
 
-### `npm test`
+## Running the Application Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Start the Backend First
+Before running the frontend, make sure the backend is running. Follow the instructions in the [backend repository](https://github.com/wellboorati/duckduckgo-back-end).
 
-### `npm run build`
+### Development Mode (Auto-restart on changes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Production Mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First, build the project:
 
-### `npm run eject`
+```sh
+yarn build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then, start the server:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Submit Query:** Users can input a search query and fetch results from the DuckDuckGo API.
+- **Display Results:** Results are presented with clickable titles.
+- **Pagination:** Users can navigate between pages of results.
+- **Query History:** Stores past queries, allowing users to re-run previous searches.
+- **Search Highlight:** Highlights the searched term in results and counts occurrences.
 
-## Learn More
+## Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a `.env` file in the project root to configure environment variables:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+REACT_APP_API_BASE_URL=http://localhost:3000
+```
+
+## Running Tests
+
+To run tests:
+
+```sh
+yarn test
+```
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push the changes and open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
